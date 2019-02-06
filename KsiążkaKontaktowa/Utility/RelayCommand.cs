@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace KsiążkaKontaktowa.Utilty
 {
-    class RelayCommand<T> : ICommand
+   public class RelayCommand<T> : ICommand
     {
         
         private readonly Action<T> _execute = null;
@@ -34,5 +34,13 @@ namespace KsiążkaKontaktowa.Utilty
         {
              _execute((T)parameter);
         }
+    }
+    public class RelayCommand : RelayCommand<object>
+    {
+        public RelayCommand(Action execute)
+            : base(_ => execute()) { }
+
+        public RelayCommand(Action execute, Func<bool> canExecute)
+            : base(_ => execute(), _ => canExecute()) { }
     }
 }

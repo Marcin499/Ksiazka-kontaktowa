@@ -12,19 +12,18 @@ namespace KsiążkaKontaktowa.Utilty
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChnaged(string propertyName)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        protected virtual bool OnPropertyChanged<T>(ref T backingfield, T value, [CallerMemberName] string propertyname= "")
+        protected virtual bool OnPropertyChanged<T>(ref T backingField, T value, [CallerMemberName] string propertyName = "")
         {
-            if(EqualityComparer<T>.Default.Equals(backingfield, value))
-            {
+            if (EqualityComparer<T>.Default.Equals(backingField, value))
                 return false;
-            }
-            backingfield = value;
-            OnPropertyChanged(ref backingfield, value,propertyname);
+
+            backingField = value;
+            OnPropertyChanged(propertyName);
             return true;
         }
     }
