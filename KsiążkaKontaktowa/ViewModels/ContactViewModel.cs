@@ -18,14 +18,14 @@ namespace KsiążkaKontaktowa.ViewModels
             set { OnPropertyChanged(ref _selectedContact, value); }
         }
 
-        public ObservableCollection<Contact> Constacts { get; private set; }
+        public ObservableCollection<Contact> Contacts { get; private set; }
 
         public ContactViewModel()
         {
 
         }
 
-        public void LoadContact(IEnumerable<Contact> contacts)
+        public void LoadContacts(IEnumerable<Contact> contacts)
         {
             contacts = new ObservableCollection<Contact>(contacts);
             OnPropertyChanged("Contacts");

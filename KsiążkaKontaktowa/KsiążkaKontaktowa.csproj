@@ -117,7 +117,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\DefaultContactImage.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\classic_c4cb0395-1e15-4ea9-82ff-74549fe31217.jpg" />
   </ItemGroup>

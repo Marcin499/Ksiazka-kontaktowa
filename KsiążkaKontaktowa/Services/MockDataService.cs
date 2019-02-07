@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace KsiążkaKontaktowa.Services
 {
-    class MockDataService: IContactDataService
+    class MockDataService : IContactDataService
     {
         private IEnumerable<Contact> _constacts;
         public MockDataService()
         {
-            new Contact
+            _constacts = new List<Contact>()
+            {
+                new Contact
             {
                 Name = "Józef Kowalski",
                 PhoneNumber = new string[]
@@ -27,7 +29,7 @@ namespace KsiążkaKontaktowa.Services
                 {
                     "Fake Avenue 15b", "Cwiarki 3/4"
                 }
-            };
+             },
 
             new Contact
             {
@@ -44,8 +46,9 @@ namespace KsiążkaKontaktowa.Services
                 {
                     "Fake Avenue 15b", "Cwiarki 3/4"
                 }
-            };
-        }
+            },
+        };
+      }
 
         public IEnumerable<Contact> GetContacts()
         {
@@ -58,3 +61,4 @@ namespace KsiążkaKontaktowa.Services
         }
     }
 }
+

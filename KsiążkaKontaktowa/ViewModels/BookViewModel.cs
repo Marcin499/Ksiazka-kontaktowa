@@ -33,13 +33,13 @@ namespace KsiążkaKontaktowa.ViewModels
 
         private void LoadContacts()
         {
-            ContactsVM.LoadContact(_service.GetContacts());
+            ContactsVM.LoadContacts(_service.GetContacts());
         }
 
         private void LoadFavorites()
         {
             var favorites = _service.GetContacts().Where(c => c.IsFavorite);
-            ContactsVM.LoadContact(favorites);
+            ContactsVM.LoadContacts(favorites);
         }
     }
 }
