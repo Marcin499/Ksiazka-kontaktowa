@@ -1,64 +1,69 @@
-﻿using KsiążkaKontaktowa.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleContactBook.Models;
 
-namespace KsiążkaKontaktowa.Services
+namespace SimpleContactBook.Services
 {
-    class MockDataService : IContactDataService
+    public class MockDataService : IContactDataService
     {
-        private IEnumerable<Contact> _constacts;
+        private IEnumerable<Contact> _contacts;
+
         public MockDataService()
         {
-            _constacts = new List<Contact>()
+            _contacts = new List<Contact>()
             {
                 new Contact
-            {
-                Name = "Józef Kowalski",
-                PhoneNumber = new string[]
                 {
-                    "555-111-3333", "444-555-8888"
+                    Name = "John Doe",
+                    PhoneNumbers = new string[]
+                    {
+                        "555-111-1111",
+                        "555-222-2222"
+                    },
+                    Emails = new string[]
+                    {
+                        "Johndoe@personal.com",
+                        "Johndoe@business.com"
+                    },
+                    Locations = new string[]
+                    {
+                        "111 Fake Street",
+                        "222 Fake Ave"
+                    }
                 },
-                Email = new string[]
+                new Contact
                 {
-                    "kowalski@gmail.com", "jozek.kowalski@gmail.com"
+                    Name = "Jane Doe",
+                    PhoneNumbers = new string[]
+                    {
+                        "555-333-3333",
+                        "555-444-4444"
+                    },
+                    Emails = new string[]
+                    {
+                        "Janedoe@personal.com",
+                        "Janedoe@business.com"
+                    },
+                    Locations = new string[]
+                    {
+                        "111 Fake Street",
+                        "333 Fake Ave"
+                    }
                 },
-                Location = new string[]
-                {
-                    "Fake Avenue 15b", "Cwiarki 3/4"
-                }
-             },
-
-            new Contact
-            {
-                Name = "Maria Kowalska",
-                PhoneNumber = new string[]
-                {
-                    "555-111-3333", "444-555-8888"
-                },
-                Email = new string[]
-                {
-                    "kowalska@gmail.com", "miaria.kowalska@gmail.com"
-                },
-                Location = new string[]
-                {
-                    "Fake Avenue 15b", "Cwiarki 3/4"
-                }
-            },
-        };
-      }
+            };
+        }
 
         public IEnumerable<Contact> GetContacts()
         {
-            return _constacts;
+            return _contacts;
         }
 
         public void Save(IEnumerable<Contact> contacts)
         {
-            _constacts = contacts;
+            _contacts = contacts;
         }
     }
 }
-

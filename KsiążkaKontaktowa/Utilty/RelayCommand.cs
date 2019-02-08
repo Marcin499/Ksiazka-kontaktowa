@@ -5,19 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace KsiążkaKontaktowa.Utilty
+namespace SimpleContactBook.Utilty
 {
-   public class RelayCommand<T> : ICommand
+    public class RelayCommand<T> : ICommand
     {
-        
         private readonly Action<T> _execute = null;
         private readonly Func<T, bool> _canExecute = null;
-
-        public event EventHandler CanExecuteChanged
-        {
-            add => CommandManager.RequerySuggested += value;
-            remove => CommandManager.RequerySuggested -= value;
-        }
 
         public RelayCommand(Action<T> execute, Func<T, bool> canExecute = null)
         {
@@ -25,16 +18,17 @@ namespace KsiążkaKontaktowa.Utilty
             _canExecute = canExecute ?? (_ => true);
         }
 
-        public bool CanExecute(object parameter)
+        public event EventHandler CanExecuteChanged
         {
-            return _canExecute((T)parameter);
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
 
-        public void Execute(object parameter)
-        {
-             _execute((T)parameter);
-        }
+        public bool CanExecute(object parameter) => _canExecute((T)parameter);
+
+        public void Execute(object parameter) => _execute((T)parameter);
     }
+
     public class RelayCommand : RelayCommand<object>
     {
         public RelayCommand(Action execute)

@@ -1,11 +1,11 @@
-﻿using KsiążkaKontaktowa.Utilty;
+﻿using SimpleContactBook.Utilty;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KsiążkaKontaktowa.Models
+namespace SimpleContactBook.Models
 {
     public class Contact : ObservableObject
     {
@@ -16,25 +16,25 @@ namespace KsiążkaKontaktowa.Models
             set { OnPropertyChanged(ref _name, value); }
         }
 
-        private string[] _phonenumber;
-        public string[] PhoneNumber
+        private string[] _phoneNumbers;
+        public string[] PhoneNumbers
         {
-            get { return _phonenumber; }
-            set { OnPropertyChanged(ref _phonenumber, value); }
+            get { return _phoneNumbers; }
+            set { OnPropertyChanged(ref _phoneNumbers, value); }
         }
 
-        private string[] _email;
-        public string[] Email
+        private string[] _emails;
+        public string[] Emails
         {
-            get { return _email; }
-            set { OnPropertyChanged(ref _email, value); }
+            get { return _emails; }
+            set { OnPropertyChanged(ref _emails, value); }
         }
 
-        private string[] _location;
-        public string[] Location
+        private string[] _locations;
+        public string[] Locations
         {
-            get { return _location; }
-            set { OnPropertyChanged(ref _location, value); }
+            get { return _locations; }
+            set { OnPropertyChanged(ref _locations, value); }
         }
 
         private bool _isFavorite;
@@ -44,11 +44,11 @@ namespace KsiążkaKontaktowa.Models
             set { OnPropertyChanged(ref _isFavorite, value); }
         }
 
-        private string[] _image;
-        public string[] Image
+        private string _imagePath;
+        public string ImagePath
         {
-            get { return _image; }
-            set { OnPropertyChanged(ref _image, value); }
+            get { return _imagePath; }
+            set { OnPropertyChanged(ref _imagePath, value); }
         }
     }
 }

@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace KsiążkaKontaktowa.Views
+namespace SimpleContactBook.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy ContactItemView.xaml
+    /// Interaction logic for ContactItemView.xaml
     /// </summary>
     public partial class ContactItemView : UserControl
     {

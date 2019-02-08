@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimpleContactBook
+namespace SimpleContactBook.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DetailsView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DetailsView : UserControl
     {
-        public MainWindow()
+        public DetailsView()
         {
             InitializeComponent();
         }

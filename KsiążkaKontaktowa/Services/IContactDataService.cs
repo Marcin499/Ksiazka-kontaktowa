@@ -1,11 +1,11 @@
-﻿using KsiążkaKontaktowa.Models;
+﻿using SimpleContactBook.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KsiążkaKontaktowa.Services
+namespace SimpleContactBook.Services
 {
     public interface IContactDataService
     {
