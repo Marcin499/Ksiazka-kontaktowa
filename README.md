@@ -3,5 +3,5 @@ Aplikacja zawierająca baze danych osób wraz z ich danymi personalnymi takimi j
 Do stworzenia aplikacji wykorzystano: WPF oraz wzorzec architektoniczny MVVM.
 
 # Screeny z aplikacji
-![alt text](https://i.imgur.com/NcO88mM.png)
+![alt text](https://i.imgur.com/NcO88mM.png) 
 
