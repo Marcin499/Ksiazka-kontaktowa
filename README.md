@@ -1,5 +1,5 @@
 # Książka kontaktowa
-Aplikacja umożliwiająca sprawdzenie za pomocą numeru NIP czy dana firma jest podatnikiem VAT oraz zapisanie informacji w formacie xml.
+Aplikacja umożliwiająca sprawdzenie za pomocą numeru NIP czy dana firma jest podatnikiem VAT na terenie UE oraz zapisanie informacji w formacie xml.
 Do zbudowania aplikacji wykorzystano: Web Services, WinForms.
 
 # Screeny z aplikacji
