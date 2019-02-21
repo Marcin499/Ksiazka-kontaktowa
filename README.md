@@ -1,7 +1,6 @@
 # Książka kontaktowa
-Aplikacja umożliwiająca sprawdzenie za pomocą numeru NIP czy dana firma jest podatnikiem VAT na terenie UE oraz zapisanie informacji w formacie xml.
-Do zbudowania aplikacji wykorzystano: Web Services, WinForms.
+Aplikacja zawierająca baze danych osób wraz z ich danymi personalnymi takimi jak: numery telefonów, emaila, czy też miejsca pracy i zamieszkania.
+Do stworzenia aplikacji wykorzystano: WPF oraz wzorzec architektoniczny MVVM.
 
 # Screeny z aplikacji
-![alt text](https://i.imgur.com/kf4LqQz.png) 
-
+![alt text](https://i.imgur.com/NcO88mM.png)
